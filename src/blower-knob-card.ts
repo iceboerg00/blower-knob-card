@@ -70,6 +70,7 @@ export class BlowerKnobCard extends LitElement {
     ev.preventDefault();
     const dial = this.shadowRoot?.querySelector(".dial") as HTMLElement | null;
     if (!dial || !this._entity) return;
+    dial.setPointerCapture?.(ev.pointerId);
     const rect = dial.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
     const centerY = rect.top + rect.height / 2;
@@ -87,6 +88,7 @@ export class BlowerKnobCard extends LitElement {
     };
 
     const handleUp = () => {
+      dial.releasePointerCapture?.(ev.pointerId);
       window.removeEventListener("pointermove", handleMove);
       window.removeEventListener("pointerup", handleUp);
     };

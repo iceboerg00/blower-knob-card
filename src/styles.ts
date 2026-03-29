@@ -62,6 +62,7 @@ export const cardStyles = css`
     width: 100%;
     height: 100%;
     border-radius: 50%;
+    touch-action: none;
     background:
       conic-gradient(
         var(--accent) 0deg,
