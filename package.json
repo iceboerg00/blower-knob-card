@@ -1,0 +1,39 @@
+{
+  "name": "blower-knob-card",
+  "version": "1.0.0",
+  "description": "Home Assistant Lovelace custom card: circular blower control knob for fan/number/input_number entities.",
+  "type": "module",
+  "main": "dist/blower-knob-card.js",
+  "module": "dist/blower-knob-card.js",
+  "scripts": {
+    "build": "esbuild src/blower-knob-card.ts --bundle --minify --sourcemap --target=es2019 --format=esm --outfile=dist/blower-knob-card.js",
+    "watch": "esbuild src/blower-knob-card.ts --bundle --sourcemap --target=es2019 --format=esm --outfile=dist/blower-knob-card.js --watch"
+  },
+  "keywords": [
+    "home-assistant",
+    "lovelace",
+    "hacs",
+    "custom-card",
+    "fan",
+    "control"
+  ],
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "src",
+    "hacs.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "lit": "^3.3.2"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.4",
+    "typescript": "^6.0.2"
+  }
+}

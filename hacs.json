@@ -1,0 +1,9 @@
+{
+  "name": "Blower Knob Card",
+  "filename": "blower-knob-card.js",
+  "render_readme": true,
+  "content_in_root": false,
+  "country": "US",
+  "zip_release": false,
+  "hide_default_branch": false
+}
